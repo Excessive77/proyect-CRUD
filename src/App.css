@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.container-cards {
+  align-items: stretch;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  color: black;
+  width: 500px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+}
