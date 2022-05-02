@@ -23,7 +23,6 @@ function App() {
   useEffect(() => {
     getUsers()
     .then((res) => {
-      console.log(res.data)
       setUsers(res.data)
     })
   }, [])
@@ -33,13 +32,10 @@ function App() {
     if(newUser.first_name){
       postNewUser(newUser)
       .then((res) => {
-        console.log(res.data)
         setUsers([...users, res.data])
         setNewUser({})
       })
-    } else {
-      console.log('No hay valores')
-    }
+    } 
   }, [newUser, users])
   
 
@@ -75,11 +71,6 @@ function App() {
     }
   }, [editFormRes, users])
 
-  // const filterUser = (id) => {
-  //   const newArr = users.filter((user) => id !== user.id)
-  //   return newArr
-  // }
-
   const handlerOnCreateUser = (event) => {
     setNewUser(event)
   }
@@ -112,7 +103,7 @@ function App() {
           {userList}
 
         </div>
-        
+
       </header>
     </div>
   );
